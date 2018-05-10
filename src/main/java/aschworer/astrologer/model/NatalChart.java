@@ -19,6 +19,15 @@ public class NatalChart {
     private Person person;
 
     @Getter
+    @Setter
+    private String name;
+
+    @Getter
+    @Setter
+    private String personId;
+
+
+    @Getter
     private List<CharacteristicInSign> characteristicsInSigns = new ArrayList<>();//todo change to a map
 
     public NatalChart(List<CharacteristicInSign> characteristicsInSigns) {

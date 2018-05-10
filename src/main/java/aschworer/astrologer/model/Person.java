@@ -11,7 +11,12 @@ import lombok.Setter;
 public class Person {
     @Getter
     @Setter
-
+    private String id;
+    @Getter
+    @Setter
+    private String owner;
+    @Getter
+    @Setter
     private String name;
     @Getter
     @Setter
