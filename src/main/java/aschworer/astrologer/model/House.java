@@ -67,7 +67,34 @@ public enum House implements Characteristic {
     }
 
     public String getString() {
-        return string;
+        switch (this) {
+            case I:
+                return "Ascendant";
+            case II:
+                return "2nd house";
+            case III:
+                return "3rd house";
+            case IV:
+                return "4th house";
+            case V:
+                return "5th house";
+            case VI:
+                return "6th house";
+            case VII:
+                return "7th house";
+            case VIII:
+                return "8th house";
+            case IX:
+                return "9th house";
+            case X:
+                return "Midheaven";
+            case XI:
+                return "11th house";
+            case XII:
+                return "12th house";
+
+                default: return "House not found";//todo
+        }
     }
 
     public Integer getWeight() {

@@ -40,7 +40,7 @@ public class CharacteristicInSign {
 
     @Override
     public String toString() {
-        return characteristic + ": " + ((signs.length > 1) ? toSignRange() : signs[0]) + ((signs.length > 1) ? "" : " (" + signs[0].getElement() + ")");
+        return characteristic.getString() + ": " + ((signs.length > 1) ? toSignRange() : signs[0]) + ((signs.length > 1) ? "" : " (" + signs[0].getElement() + ")");
     }
 
     public String toSignRange() {
