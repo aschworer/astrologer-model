@@ -14,15 +14,12 @@ public class CharacteristicInSign {
     @Getter
     @Setter
     private Characteristic characteristic;
-    /*@Getter
-    @Setter*/
-//    private Sign signs;
 
     @Getter
     @Setter
     @SerializedName("sign")
     private Sign[] signs = new Sign[1];
-    //    private Double angle;
+
     @Getter
     @Setter
     private String angle;

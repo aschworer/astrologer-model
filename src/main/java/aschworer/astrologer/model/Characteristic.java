@@ -9,4 +9,14 @@ public interface Characteristic {
 
     String getString();
 
+//    Sign[] rules();
+//
+//    Sign exaltedIn();
+//
+//    Sign fallsIn();
+//
+//    String getKeywords(); // todo move to storage
+//
+//    String setKeywords();
+
 }

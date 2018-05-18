@@ -51,7 +51,6 @@ public enum Planet implements Characteristic {
 
     @Override
     public String toString() {
-//        if (this == ASC) return "Ascendant";
         return string;
     }
 
@@ -91,6 +90,8 @@ public enum Planet implements Characteristic {
                 throw new IllegalArgumentException();
         }
     }
+
+
         /*public Element getElement() {
 
             switch (this) {

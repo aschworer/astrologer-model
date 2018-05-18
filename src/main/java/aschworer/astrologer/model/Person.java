@@ -4,6 +4,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * Created by aschworer on 01-Nov-15.
  */
@@ -20,10 +24,10 @@ public class Person {
     private String name;
     @Getter
     @Setter
-    private String dob;
+    private LocalDate dob;
     @Getter
     @Setter
-    private String tob;
+    private LocalTime tob;
     @Getter
     @Setter
     private String birthPlace;
@@ -35,7 +39,7 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", dob='" + dob + '\'' +
+                ", dob='" + DateTimeFormatter.ofPattern("dd-MM-yyyy").format(dob) + '\'' +
                 ", birthPlace='" + birthPlace + '\'' +
                 ", sex='" + sex + '\'' +
                 '}';
