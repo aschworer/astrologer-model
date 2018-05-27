@@ -9,16 +9,11 @@ public final class InterfaceAdapter<T> implements JsonDeserializer<T> {
 
         String asString = elem.getAsString();
         final JsonPrimitive wrapper = (JsonPrimitive) elem;
-        Characteristic characteristic;
-        Planet planet = Planet.getByString(asString);
-        if (planet != null) {
-            characteristic = planet;
-        } else {
-//            characteristic = House.getByString(elem.getAsString());//beware of a bug here
-            characteristic = House.X;
+        Type actualType = Planet.class;
+        if (Planet.getByString(asString) == null) {
+            actualType = House.class;
         }
         try {
-            final Type actualType = characteristic.getClass();
             return context.deserialize(wrapper, actualType);
         } catch (Exception e) {
             System.err.println(e);//todo

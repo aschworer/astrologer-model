@@ -93,7 +93,7 @@ public enum House implements Characteristic {
             case XII:
                 return "12th house";
 
-                default: return "House not found";//todo
+                default: return null;
         }
     }
 
