@@ -1,5 +1,6 @@
 package aschworer.astrologer.model;
 
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,6 +14,7 @@ public class CharacteristicInSign {
 
     @Getter
     @Setter
+    @JsonAdapter(InterfaceAdapter.class)
     private Characteristic characteristic;
 
     @Getter
