@@ -1,5 +1,7 @@
 package aschworer.astrologer.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
@@ -14,12 +16,14 @@ public class CharacteristicInSign {
 
     @Getter
     @Setter
-    @JsonAdapter(InterfaceAdapter.class)
+    @JsonAdapter(CharacteristicAdapter.class)
+    @JsonDeserialize(using = CharacteristicAdapter.class)
     private Characteristic characteristic;
 
     @Getter
     @Setter
     @SerializedName("sign")
+    @JsonProperty("sign")
     private Sign[] signs = new Sign[1];
 
     @Getter

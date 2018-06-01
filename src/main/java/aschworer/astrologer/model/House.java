@@ -1,5 +1,6 @@
 package aschworer.astrologer.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -7,33 +8,33 @@ import com.google.gson.annotations.SerializedName;
  */
 public enum House implements Characteristic {
     //    @SerializedName("Ascendant")
-    @SerializedName("Asc")
+    @SerializedName("Asc") @JsonProperty("Asc")
     ASC("Ascendant"),
-    @SerializedName("House1")
+    @SerializedName("House1") @JsonProperty("House1")
     I("I"),
-    @SerializedName("House2")
+    @SerializedName("House2") @JsonProperty("House2")
     II("II"),
-    @SerializedName("House3")
+    @SerializedName("House3") @JsonProperty("House3")
     III("III"),
-    @SerializedName("House4")
+    @SerializedName("House4") @JsonProperty("House4")
     IV("IV"),
-    @SerializedName("House5")
+    @SerializedName("House5") @JsonProperty("House5")
     V("V"),
-    @SerializedName("House6")
+    @SerializedName("House6") @JsonProperty("House6")
     VI("VI"),
-    @SerializedName("House7")
+    @SerializedName("House7") @JsonProperty("House7")
     VII("VII"),
-    @SerializedName("House8")
+    @SerializedName("House8") @JsonProperty("House8")
     VIII("VIII"),
-    @SerializedName("House9")
+    @SerializedName("House9") @JsonProperty("House9")
     IX("IX"),
     //    @SerializedName("Midheaven")
 //    X("Midheaven"),
-    @SerializedName("House10")
+    @SerializedName("House10") @JsonProperty("House10")
     X("X"),
-    @SerializedName("House11")
+    @SerializedName("House11") @JsonProperty("House11")
     XI("XI"),
-    @SerializedName("House12")
+    @SerializedName("House12") @JsonProperty("House12")
     XII("XII");
 
     private String string;
@@ -43,9 +44,6 @@ public enum House implements Characteristic {
     }
 
     public static House getByString(String str) {
-//        if ("Asc".equalsIgnoreCase(str) || "Ascendant".equalsIgnoreCase(str)){
-//            return I;
-//        }
         for (House v : values()) {
             if (v.string.equalsIgnoreCase(str)) {
                 return v;
@@ -93,7 +91,8 @@ public enum House implements Characteristic {
             case XII:
                 return "12th house";
 
-                default: return null;
+            default:
+                return null;
         }
     }
 

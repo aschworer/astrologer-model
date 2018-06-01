@@ -1,5 +1,6 @@
 package aschworer.astrologer.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -7,31 +8,31 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public enum Planet implements Characteristic {
-    @SerializedName("Sun")
+    @SerializedName("Sun") @JsonProperty("Sun")
     SUN("Sun"),
-    @SerializedName("Moon")
+    @SerializedName("Moon") @JsonProperty("Moon")
     MOON("Moon"),
-    @SerializedName("Mercury")
+    @SerializedName("Mercury") @JsonProperty("Mercury")
     MERCURY("Mercury"),
-    @SerializedName("Mars")
+    @SerializedName("Mars") @JsonProperty("Mars")
     MARS("Mars"),
-    @SerializedName("Venus")
+    @SerializedName("Venus") @JsonProperty("Venus")
     VENUS("Venus"),
-    @SerializedName("Jupiter")
+    @SerializedName("Jupiter") @JsonProperty("Jupiter")
     JUPITER("Jupiter"),
-    @SerializedName("Saturn")
+    @SerializedName("Saturn") @JsonProperty("Saturn")
     SATURN("Saturn"),
-    @SerializedName("Uranus")
+    @SerializedName("Uranus") @JsonProperty("Uranus")
     URANUS("Uranus"),
-    @SerializedName("Neptune")
+    @SerializedName("Neptune") @JsonProperty("Neptune")
     NEPTUNE("Neptune"),
-    @SerializedName("Pluto")
+    @SerializedName("Pluto") @JsonProperty("Pluto")
     PLUTO("Pluto"),
-    @SerializedName("Chiron")
+    @SerializedName("Chiron") @JsonProperty("Chiron")
     CHIRON("Chiron"),
-    @SerializedName("Lilith")
+    @SerializedName("Lilith") @JsonProperty("Lilith")
     LILITH("Lilith"),
-    @SerializedName("Asc node")
+    @SerializedName("Asc node") @JsonProperty("Asc node")
     ASC_NODE("Asc node");
 
     private String string;
