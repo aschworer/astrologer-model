@@ -8,7 +8,8 @@ import com.google.gson.annotations.SerializedName;
  */
 public enum House implements Characteristic {
     //    @SerializedName("Ascendant")
-    @SerializedName("Asc") @JsonProperty("Asc")
+//    @SerializedName("Asc") @JsonProperty("Asc")
+    @SerializedName("Ascendant") @JsonProperty("Ascendant")
     ASC("Ascendant"),
     @SerializedName("House1") @JsonProperty("House1")
     I("I"),
