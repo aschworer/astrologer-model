@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
 /**
+ * TODO HOUSE CUSP
+ *
  * @author aschworer on 01-Nov-15.
  */
 public enum House implements Characteristic {

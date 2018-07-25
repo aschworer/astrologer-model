@@ -11,7 +11,7 @@ import com.google.gson.*;
 import java.io.IOException;
 import java.lang.reflect.Type;
 
-public final class CharacteristicAdapter<T> extends StdDeserializer<T> implements JsonDeserializer<T> {
+public final class CharacteristicAdapter<T> extends StdDeserializer<T> implements JsonDeserializer<T>, JsonSerializer<T> {
 
     public CharacteristicAdapter() {
         super(Characteristic.class);
@@ -27,6 +27,15 @@ public final class CharacteristicAdapter<T> extends StdDeserializer<T> implement
 
     public CharacteristicAdapter(StdDeserializer<?> src) {
         super(src);
+    }
+
+    @Override
+    public JsonElement serialize(T src, Type type, JsonSerializationContext context) {
+        Type actualType = Planet.class;
+        if (Planet.getByString(src.toString()) == null) {
+            actualType = House.class;
+        }
+        return context.serialize(src, actualType);
     }
 
     public T deserialize(JsonElement elem, Type interfaceType, JsonDeserializationContext context) throws JsonParseException {
